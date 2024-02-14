@@ -17,10 +17,10 @@ window.addEventListener('load', () => {
             lon = posicion.coords.longitude
             lat = posicion.coords.latitude
             //ubicación actual    
-            //const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AQUI_VIENE_TU_API_KEY}`
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=07c2b302b34d0a7a8bab878e82f94088`
 
             //ubicación por ciudad
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=Parana&lang=es&units=metric&appid=07c2b302b34d0a7a8bab878e82f94088`
+            //const url = `https://api.openweathermap.org/data/2.5/weather?q=Parana&lang=es&units=metric&appid=07c2b302b34d0a7a8bab878e82f94088`
 
             //console.log(url)
 
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 
                     let temp = Math.round(data.main.temp)
                     //console.log(temp)
-                    temperaturaValor.textContent = `${temp} ° C`
+                    temperaturaValor.textContent = `${temp} °C`
 
                     //console.log(data.weather[0].description)
                     let desc = data.weather[0].description
