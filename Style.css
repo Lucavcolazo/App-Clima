@@ -53,3 +53,16 @@ body {
     background-color: #2ab2ea;
     color: azure;
 }
+
+@media screen and (max-width: 600px) {
+    #contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    #caja1,
+    #caja2,
+    #caja3 {
+        width: 90%;
+        height: auto;
+    }
+}
