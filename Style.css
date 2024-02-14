@@ -54,7 +54,8 @@ body {
     color: azure;
 }
 
-@media screen and (max-width: 600px) {
+/* Para que se pueda usar en safari y en chrome */
+@media screen and (max-width: 600px), screen and (max-height: -webkit-fill-available) {
     #contenedor {
         grid-template-columns: 1fr;
     }
@@ -64,5 +65,12 @@ body {
     #caja3 {
         width: 90%;
         height: auto;
+    }
+}
+
+/* Regla específica para Safari */
+@supports (-webkit-touch-callout: none) {
+    :root {
+        height: -webkit-fill-available;
     }
 }
